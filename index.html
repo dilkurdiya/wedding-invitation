@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4b1020">
+  <meta name="description" content="A royal Rajasthani wedding invitation.">
+  <title>Royal Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Kalam:wght@300;400&family=Marcellus&family=Tiro+Devanagari+Hindi:wght@400;500;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="screen-reader-status" aria-live="polite" id="status"></div>
+
+  <section class="intro" id="intro" aria-label="Royal welcome">
+    <div class="intro-sky"></div>
+    <div class="intro-frame" aria-hidden="true"></div>
+    <div class="intro-welcome" id="welcome">
+      <span class="tiny-ornament">✦</span>
+      <p class="eyebrow">शुभ घड़ी, मंगल बेला</p>
+      <h1>पधारो सा, म्हारे आंगणे</h1>
+      <p>दो दिलां रा मिलण रो शुभ अवसर,<br>थांने सपरिवार न्यौतां सा।</p>
+      <button class="gold-button enter-button" id="enterButton">पधारो सा <span aria-hidden="true">→</span></button>
+    </div>
+    <button class="skip-button" id="skipButton">Skip intro</button>
+
+    <div class="mahal-scene" aria-hidden="true">
+      <canvas class="fireworks-canvas" id="fireworksCanvas"></canvas>
+      <img class="palace-reference-art" src="assets/images/rajasthani-palace-reference.png" alt="">
+      <div class="reference-light-sweep"></div>
+      <div class="moon"></div>
+<svg class="palace" viewBox="0 0 1200 430" role="img" aria-label="A glowing gold line illustration of a Rajasthani royal palace">
+  <defs>
+    <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe8a0"/><stop offset=".48" stop-color="#e5b84f"/><stop offset="1" stop-color="#a86d22"/></linearGradient>
+    <linearGradient id="palaceLight" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffe8a0" stop-opacity="0"/><stop offset=".45" stop-color="#ffe8a0" stop-opacity=".9"/><stop offset=".58" stop-color="#fff0ba" stop-opacity=".95"/><stop offset="1" stop-color="#d4942d" stop-opacity="0"/></linearGradient>
+    <radialGradient id="windowGlow"><stop stop-color="#fff0a6"/><stop offset=".45" stop-color="#f4c75c"/><stop offset="1" stop-color="#d58a25" stop-opacity="0"/></radialGradient>
+    <clipPath id="palaceSilhouette"><path d="M62 394V342H105V313H145V280H174V244H199V219L218 194L237 219V244H260V280H293V301H329V264H352V226L375 196L398 226V264H423V284H454V254H482V202H510V160L540 130L570 160V202H598V254H628V284H659V264H684V226L707 196L730 226V264H753V301H789V280H822V244H845V219L864 194L883 219V244H908V280H937V313H977V342H1020V394Z"/></clipPath>
+  </defs>
+  <g class="palace-fill">
+    <path d="M62 394V342H105V313H145V280H174V244H199V219L218 194L237 219V244H260V280H293V301H329V264H352V226L375 196L398 226V264H423V284H454V254H482V202H510V160L540 130L570 160V202H598V254H628V284H659V264H684V226L707 196L730 226V264H753V284H777V301H811V280H840V244H863V219L882 194L901 219V244H926V280H955V313H995V342H1038V394Z"/>
+  </g>
+  <g class="palace-outline">
+    <!-- ground wings and layered parapets -->
+    <path d="M62 394V342H105V313H145V280H174V244H199V219L218 194L237 219V244H260V280H293V301H329V264H352V226L375 196L398 226V264H423V284H454V254H482V202H510V160L540 130L570 160V202H598V254H628V284H659V264H684V226L707 196L730 226V264H753V284H777V301H811V280H840V244H863V219L882 194L901 219V244H926V280H955V313H995V342H1038V394"/>
+    <path d="M91 342H329M105 313H293M145 280H260M329 301H454M352 264H423M454 284H482M598 284H628M659 301H777M811 280H926M840 244H926M955 313H995"/>
+    <!-- crenellations -->
+    <path d="M293 301v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14m12 0v-14h12v14"/>
+    <!-- central pavilion and finial -->
+    <path d="M505 254V202H522V171Q540 139 558 171V202H575V254M515 202H565M540 139V119M534 126H546M537 119L540 111L543 119"/>
+    <path d="M486 202H594V254H486Z M477 254H603V266H477Z M468 266H612V278H468Z"/>
+    <path d="M510 160Q540 111 570 160M518 160Q540 126 562 160M505 170H575M512 176H568"/>
+    <!-- upper chhatris -->
+    <path d="M338 264V229H350V211Q375 176 400 211V229H412V264M346 229H404M344 237H406M347 264V247Q375 225 403 247V264"/>
+    <path d="M674 264V229H686V211Q707 176 732 211V229H744V264M682 229H736M680 237H738M683 264V247Q707 225 741 247V264"/>
+    <!-- outer chhatris -->
+    <path d="M164 280V250H176V233Q199 202 222 233V250H234V280M172 250H226M170 258H228M174 280V267Q199 245 224 267V280"/>
+    <path d="M828 280V250H840V233Q863 202 886 233V250H898V280M836 250H890M834 258H892M838 280V267Q863 245 888 267V280"/>
+    <!-- far corner domes -->
+    <path d="M132 313V292H142V278Q159 255 176 278V292H186V313M139 292H179M140 313V301Q159 284 178 301V313"/>
+    <path d="M914 313V292H924V278Q941 255 958 278V292H968V313M921 292H961M922 313V301Q941 284 960 301V313"/>
+    <!-- scalloped central gateway -->
+    <path class="palace-arch" d="M466 394V319Q466 282 489 265L500 251L511 264L522 251L533 264L544 251L555 265Q578 282 578 319V394M483 394V322Q483 292 506 279Q522 270 539 279Q561 292 561 322V394"/>
+    <path d="M458 394H586M450 402H594M442 410H602M434 418H610"/>
+    <!-- jharokha balconies -->
+    <g class="jharokhas">
+      <path d="M185 342V314Q185 292 205 292Q225 292 225 314V342Z"/><path d="M309 301V278Q309 257 330 257Q351 257 351 278V301Z"/>
+      <path d="M389 284V267Q389 246 410 246Q431 246 431 267V284Z"/><path d="M649 284V267Q649 246 670 246Q691 246 691 267V284Z"/>
+      <path d="M749 301V278Q749 257 770 257Q791 257 791 278V301Z"/><path d="M875 342V314Q875 292 895 292Q915 292 915 314V342Z"/>
+    </g>
+    <!-- delicate balcony railings and columns -->
+    <path d="M176 348H234M180 354H230M300 307H359M304 313H355M740 307H799M744 313H795M866 348H924M870 354H920"/>
+    <path d="M188 348v-7m10 7v-7m10 7v-7m10 7v-7M312 307v-6m11 6v-6m11 6v-6m11 6v-6M752 307v-6m11 6v-6m11 6v-6m11 6v-6M878 348v-7m10 7v-7m10 7v-7m10 7v-7"/>
+    <!-- symmetrical ground arcades -->
+    <path d="M105 394V369Q105 349 123 349Q141 349 141 369V394M145 394V369Q145 349 163 349Q181 349 181 369V394M225 394V369Q225 349 243 349Q261 349 261 369V394M265 394V369Q265 349 283 349Q301 349 301 369V394M899 394V369Q899 349 917 349Q935 349 935 369V394M939 394V369Q939 349 957 349Q975 349 975 369V394M819 394V369Q819 349 837 349Q855 349 855 369V394M859 394V369Q859 349 877 349Q895 349 895 369V394"/>
+    <!-- ground line and palace steps -->
+    <path d="M45 394H1155M45 402H435M765 402H1155M420 402H780M433 410H767M447 418H753"/>
+  </g>
+  <g class="palace-details">
+    <path d="M510 180h60M514 186h52M520 192h40M334 241h82M340 247h70M670 241h82M676 247h70M168 264h68M832 264h68"/>
+    <path d="M493 287h94M493 294h94M493 301h94M499 309h82M499 316h82"/>
+    <path d="M470 337h-14m14 10h-14m14 10h-14m14 10h-14m118-30h14m-14 10h14m-14 10h14m-14 10h14"/>
+    <circle cx="540" cy="218" r="3"/><circle cx="375" cy="239" r="2.5"/><circle cx="707" cy="239" r="2.5"/>
+  </g>
+  <g class="windows">
+    <rect x="197" y="309" width="16" height="28" rx="8"/><rect x="320" y="273" width="19" height="25" rx="9.5"/><rect x="399" y="262" width="20" height="20" rx="10"/>
+    <rect x="530" y="177" width="20" height="35" rx="10"/><rect x="660" y="262" width="20" height="20" rx="10"/><rect x="761" y="273" width="19" height="25" rx="9.5"/><rect x="887" y="309" width="16" height="28" rx="8"/>
+    <rect x="116" y="363" width="15" height="24" rx="7"/><rect x="268" y="363" width="15" height="24" rx="7"/><rect x="916" y="363" width="15" height="24" rx="7"/><rect x="1068" y="363" width="15" height="24" rx="7"/>
+  </g>
+  <g class="palace-gardens">
+    <path d="M82 394q-18-16-7-29q2 19 12 23q-9-25 8-39q-2 27 1 38q6-27 23-31q-7 20-19 38M1120 394q18-16 7-29q-2 19-12 23q9-25-8-39q2 27-1 38q-6-27-23-31q7 20 19 38"/>
+    <path d="M130 394q-8-21 8-32q-2 18 7 24q2-28 20-36q-5 23-5 36q12-18 25-16q-10 14-18 24M1070 394q8-21-8-32q2 18-7 24q-2-28-20-36q5 23 5 36q-12-18-25-16q10 14 18 24"/>
+    <path d="M295 394l-10-18l10 5l8-18l2 23l11-7l-7 15M905 394l10-18l-10 5l-8-18l-2 23l-11-7l7 15"/>
+  </g>
+  <rect class="palace-light" x="-500" y="100" width="380" height="330" fill="url(#palaceLight)" clip-path="url(#palaceSilhouette)"/>
+</svg>
+      <div class="mandala mandala-left">❋</div><div class="mandala mandala-right">❋</div>
+    </div>
+    <div class="curtain curtain-left" aria-hidden="true"><span class="curtain-ornaments"><span>✦</span><span>❋</span><span>✦</span></span></div><div class="curtain curtain-right" aria-hidden="true"><span class="curtain-ornaments"><span>✦</span><span>❋</span><span>✦</span></span></div>
+    <div class="scroll-preview" aria-hidden="true"><span class="scroll-roller top"></span><div class="scroll-paper"><p>परिवारजनों के आशीर्वाद से</p><h2 class="scroll-names"><span data-config="brideName">Bride Name</span><i>&amp;</i><span data-config="groomName">Groom Name</span></h2><span class="scroll-sweep"></span></div><span class="scroll-roller bottom"></span></div>
+  </section>
+
+  <header class="site-header" id="siteHeader">
+    <a href="#welcome-section" class="brand">❋ <span data-config="brideName">Bride Name</span> &amp; <span data-config="groomName">Groom Name</span></a>
+    <div class="header-actions"><button class="icon-button" id="musicButton" aria-label="Play background music" aria-pressed="false"><span aria-hidden="true">♫</span></button><button class="replay-link" id="replayButton">Replay intro</button></div>
+  </header>
+
+  <main id="mainInvitation" tabindex="-1">
+    <section class="hero-section" id="welcome-section">
+      <div class="hero-artwork" aria-hidden="true">
+        <img class="hero-jharokha" src="assets/images/Ornate Golden Floral Jharokha Arch.png" alt="">
+        <img class="hero-toran" src="assets/images/Symmetrical Marigold Garland Swag.png" alt="">
+        <img class="hero-landscape" src="assets/images/Palace Landscape Without Sky.png" alt="">
+        <img class="hero-curtain hero-curtain-left" src="assets/images/Ornate Red and Gold Curtain Corner.png" alt="">
+        <img class="hero-curtain hero-curtain-right" src="assets/images/right-curtain-exact-mirror.png" alt="">
+        <img class="hero-lantern hero-lantern-left" src="assets/images/Ornate Golden Rajasthani Hanging Lantern.png" alt="">
+        <img class="hero-lantern hero-lantern-right" src="assets/images/Ornate Golden Rajasthani Hanging Lantern.png" alt="">
+        <img class="hero-peacock hero-peacock-left" src="assets/images/Colourful Peacock with Floral Arrangement.png" alt="">
+        <img class="hero-peacock hero-peacock-right" src="assets/images/peacock_right_exact_mirror.png" alt="">
+      </div>
+      <div class="hero-content">
+        <p class="mantra">॥ श्री गणेशाय नमः ॥</p>
+        <div class="flourish">❋</div>
+        <p class="eyebrow">सपरिवार स्नेह निमंत्रण</p>
+        <h1><span data-config="brideName">Bride Name</span><em>&amp;</em><span data-config="groomName">Groom Name</span></h1>
+        <p class="hero-copy" data-config="introMessage">आप सपरिवार पधारकर, नवजीवन की इस मंगल बेला के साक्षी बनें।</p>
+        <a href="#celebrations" class="scroll-cue" aria-label="Scroll to celebrations">⌄</a>
+      </div>
+    </section>
+
+    <section class="section date-section" aria-labelledby="date-title">
+      <div class="section-heading"><span>✦</span><p>शुभ तिथियाँ</p><h2 id="date-title">खोलिए, खुशियों की एक झलक</h2></div>
+      <p class="section-intro">हर शाही दिल में छुपी खुशी जानने के लिए उसे धीरे से खुरचें, या नीचे दिए बटन से खोलें।</p>
+      <div class="scratch-grid" id="scratchGrid"></div>
+    </section>
+
+    <section class="section celebrations" id="celebrations" aria-labelledby="celebration-title">
+      <div class="festivity-lantern festivity-lantern-left" aria-hidden="true">✧</div>
+      <div class="festivity-lantern festivity-lantern-right" aria-hidden="true">✧</div>
+      <div class="festivity-corner festivity-corner-left" aria-hidden="true">❋</div>
+      <div class="festivity-corner festivity-corner-right" aria-hidden="true">❋</div>
+      <div class="section-heading"><span>❋</span><p class="festivities-eyebrow">मंगलमय विवाह उत्सव</p><h2 id="celebration-title">शुभ अवसर, खुशियों के संग</h2></div>
+      <p class="festivities-intro">आइए, हमारे संग इन खास और यादगार पलों का हिस्सा बनिए। पधारो सा!</p>
+      <div class="festivities-divider" aria-hidden="true"><span>❀</span></div>
+      <div class="event-list" id="eventList"></div>
+      <img class="festivity-palace" src="assets/images/Illuminated%20Palace%20with%20Glowing%20Reflection.png" alt="" aria-hidden="true" />
+    </section>
+
+    <section class="section venue-section" id="venue" aria-labelledby="venue-title">
+      <div class="venue-artwork">
+        <picture class="venue-artwork-picture">
+          <source media="(max-width: 600px)" srcset="assets/images/venue-jharokha-mobile.png">
+          <img src="assets/images/venue-jharokha-wide.png" alt="राजस्थानी महल, जालीदार झरोखा और पारंपरिक सजावट" loading="lazy">
+        </picture>
+        <div class="venue-card">
+          <p class="venue-invocation">॥ श्री गणेशाय नमः ॥</p>
+          <p class="venue-welcome">पधारो सा</p>
+          <p class="venue-eyebrow">शुभ विवाह स्थल</p>
+          <div class="venue-ornament-divider" aria-hidden="true"><span>✿</span></div>
+          <h2 id="venue-title" data-config="venueName">[विवाह स्थल रो नाम]</h2>
+          <p class="address" data-config="venueAddress">[पूरो पतो]\n[शहर, राजस्थान]</p>
+          <div class="venue-ornament-divider venue-ornament-divider--lower" aria-hidden="true"><span>✿</span></div>
+          <p class="location-note" data-config="venueNote">आप सब ने सादर पधारने रो निमंत्रण है।</p>
+          <a class="gold-button venue-directions muted-link" id="directionsLink" href="#venue" target="_blank" rel="noopener"><span aria-hidden="true">⌖</span> रास्तो देखो <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="venue-map-wrap" aria-label="विवाह स्थल का नक्शा">
+        <div class="venue-map-heading">
+          <p class="venue-map-kicker">अपणां री सुविधा खातर</p>
+          <h3>आवण रो रास्तो</h3>
+          <p>नक्शे में विवाह स्थल देखो और रास्तो जानो सा।</p>
+        </div>
+        <div class="venue-map-frame">
+          <!-- old one <iframe title="उम्मेद भवन पैलेस, जोधपुर का Google Maps नक्शा" src="https://www.google.com/maps?q=Umaid+Bhawan+Palace%2C+Jodhpur&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe> -->
+		  <iframe title="बादली, नागौर का Google Maps नक्शा" src="https://www.google.com/maps?q=27.2115828,73.7449092&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <!-- <p class="venue-map-test-note">नोट: यह केवल परीक्षण हेतु नमूना स्थान है। वास्तविक विवाह स्थल बाद में जोड़ा जाएगा।</p> -->
+      </div>
+    </section>
+
+    <section class="hosts-section" aria-labelledby="hosts-title">
+      <picture class="hosts-background-picture" aria-hidden="true">
+        <source media="(max-width: 700px)" srcset="assets/images/family-hosts-background-mobile.png">
+        <img class="hosts-background" src="assets/images/family-hosts-background.webp" alt="" loading="lazy">
+      </picture>
+      <div class="hosts-content">
+        <p class="hosts-kicker">With warm regards from</p>
+        <h2 id="hosts-title" data-config="familyMessageTitle">स्नेहिल आमंत्रण</h2>
+        <p class="hosts-intro" data-config="familyMessage">आपका स्नेह और आशीर्वाद हमारे लिए अनमोल है।</p>
+        <div class="hosts-families">
+          <article class="hosts-family hosts-family-bride">
+            <h3>कन्या पक्ष</h3>
+            <!--<p class="hosts-family-subtitle">(आमंत्रक परिवार)</p>-->
+            <p class="hosts-family-name" data-config="brideFamilyName">बालोटिया परिवार<!-- [कन्या पक्ष परिवार / होस्ट नाम] --></p>
+            <p class="hosts-family-location" data-config="brideFamilyLocation">चण्डावल, जिला पाली, राजस्थान – 306306<!--[शहर, राजस्थान]--></p>
+          </article>
+          <article class="hosts-family hosts-family-groom">
+            <h3>वर पक्ष</h3>
+            <!--<p class="hosts-family-subtitle">(आमंत्रक परिवार)</p>-->
+            <p class="hosts-family-name" data-config="groomFamilyName">कुरड़िया परिवार<!--[वर पक्ष परिवार / होस्ट नाम]--></p>
+            <p class="hosts-family-location" data-config="groomFamilyLocation">नागौर, राजस्थान<!--[शहर, राजस्थान]--></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-royal-inner">
+        <div class="section-heading gallery-heading">
+          <span class="gallery-heading-ornament" aria-hidden="true">✿</span>
+          <p class="gallery-kicker">म्हारी कहानी, जल्द ही</p>
+          <h2 id="gallery-title">म्हारी यादां री पोटली</h2>
+          <span class="gallery-title-flourish" aria-hidden="true">❧　✿　❧</span>
+        </div>
+        <p class="section-intro">अपणां संग बिताए सुंदर पल, जिणने याद कर मन खुश हो जावै।</p>
+        <div class="gallery-grid" id="galleryGrid" aria-label="शादी की यादों की तस्वीरें"></div>
+        <div class="gallery-bottom-ornament" aria-hidden="true"><span>◆</span><b>✿</b><span>◆</span></div>
+      </div>
+    </section>
+
+    <section class="rsvp-section" id="rsvp" aria-labelledby="rsvp-title">
+      <div class="rsvp-content">
+        <div class="rsvp-elephant rsvp-elephant--left" aria-hidden="true"><img src="assets/images/rsvp/rsvp-elephant-right.png" alt="" loading="lazy"></div>
+        <div class="rsvp-elephant rsvp-elephant--right" aria-hidden="true"><img src="assets/images/rsvp/rsvp-elephant-left.png" alt="" loading="lazy"></div>
+        <article class="rsvp-card">
+          <img class="rsvp-card-frame" src="assets/images/rsvp/rsvp-parchment.png" alt="" aria-hidden="true" loading="lazy">
+          <img class="rsvp-card-frame-mobile" src="assets/images/rsvp/rsvp-parchment-mobile.png" alt="" aria-hidden="true" loading="lazy">
+          <div class="rsvp-card-content">
+            <p class="rsvp-invocation">॥ सादर निमंत्रण ॥</p>
+            <img class="rsvp-divider rsvp-divider--long" src="assets/images/rsvp/rsvp-divider-long.png" alt="" aria-hidden="true">
+            <h2 id="rsvp-title">पधारो सा, म्हारे आंगणे</h2>
+            <p class="rsvp-welcome">थांरो आवणो म्हारे वास्ते खुशियां रो सबसे सुंदर उपहार है।</p>
+            <img class="rsvp-divider rsvp-divider--short" src="assets/images/rsvp/rsvp-divider-short.png" alt="" aria-hidden="true">
+            <p class="rsvp-prompt">कृपया आपणी उपस्थिति बतावो सा</p>
+            <div class="rsvp-actions">
+              <button class="rsvp-button rsvp-button--yes" type="button" data-rsvp-response="yes"><span class="rsvp-whatsapp" aria-hidden="true">◉</span> हाँ सा, जरूर पधारांगा</button>
+              <button class="rsvp-button rsvp-button--no" type="button" data-rsvp-response="no"><span class="rsvp-whatsapp" aria-hidden="true">◉</span> क्षमा करजो, आ पावांगा नहीं</button>
+            </div>
+          </div>
+        </article>
+        <img class="rsvp-palace" src="assets/images/rsvp/rsvp-palace-footer.png" alt="" aria-hidden="true" loading="lazy">
+      </div>
+    </section>
+  </main>
+  <footer><p data-config="closingMessage">We await your blessings as two hearts, two families, and many memories become one.</p><div>❋ &nbsp; ✦ &nbsp; ❋</div></footer>
+  <audio id="backgroundMusic" preload="none"></audio>
+  <script src="js/main.js"></script>
+</body>
+</html>
