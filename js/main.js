@@ -3,22 +3,22 @@ const WEDDING = {
   brideName: 'दिलीप'/*[BRIDE NAME]*/, groomName: 'मोनिका'/*[GROOM NAME]*/,
   introMessage: 'आप सपरिवार पधारकर, नवजीवन की इस मंगल बेला के साक्षी बनें।',
   familyNames: '[FAMILY / HOST NAMES]', familyMessage: 'आपका स्नेह और आशीर्वाद हमारे लिए अनमोल है।',
-  venueName: 'बादली'/*उम्मेद भवन पैलेस*/, venueAddress: 'किदवई कॉलोनी, नागौर\nराजस्थान – ३४१००१'/*सर्किट हाउस रोड, जोधपुर\nराजस्थान – 342006'*/, /*venueNote: 'यह स्थान केवल वेबसाइट परीक्षण हेतु जोड़ा गया है।',*/
-  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=27.2115828%2C73.7449092'/*https://www.google.com/maps/dir/?api=1&destination=Umaid+Bhawan+Palace%2C+Jodhpur*/, rsvpUrl: '', whatsappNumber: '', contact: '[RSVP CONTACT / LINK TO BE ADDED]',
+  venueName: 'बदली'/*उम्मेद भवन पैलेस*/, venueAddress: 'किदवई कॉलोनी, नागौर\nराजस्थान – ३४१००१'/*सर्किट हाउस रोड, जोधपुर\nराजस्थान – 342006'*/, /*venueNote: 'यह स्थान केवल वेबसाइट परीक्षण हेतु जोड़ा गया है।',*/
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=27.212480%2C73.745405'/*https://www.google.com/maps/dir/?api=1&destination=Umaid+Bhawan+Palace%2C+Jodhpur*/, rsvpUrl: '', whatsappNumber: '', contact: '[RSVP CONTACT / LINK TO BE ADDED]',
   closingMessage: 'We await your blessings as two hearts, two families, and many memories become one.',
-  musicPath: 'assets/audio/background-music.mp3',
+  musicPath: 'assets/audio/background-music.mpeg',
   scratchItems: [
     {label:'२९ नवंबर २०२६',value:'हल्दी समारोह',detail:''},
     {label:'२ दिसंबर २०२६',value:'शुभ विवाह',detail:''},
     {label:'३ दिसंबर २०२६',value:'स्वागत समारोह',detail:''}
   ],
   events:[
-    {icon:'assets/images/event-haldi.png',name:'हल्दी समारोह',date:'२९ नवंबर २०२६'/*[तारीख तय होनी है]*/,time:'दोपहर २:०० बजे'/*[समय तय होना है]*/,venue:'बादली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
-    {icon:'assets/images/event-mehndi.png',name:'मेहंदी समारोह',date:'३० नवंबर २०२६'/*[तारीख तय होनी है]*/,time:'दोपहर २:०० बजे'/*[समय तय होना है]*/,venue:'बादली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
-    {icon:'assets/images/event-sangeet.png',name:'संगीत संध्या',date:'१ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'रात ८:०० बजे'/*[समय तय होना है]*/,venue:'बादली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
-	//{icon:'assets/images/event-sangeet.png',name:'बारात प्रस्थान — नागौर से चण्डावल के लिए',date:'१ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'रात ८:०० बजे'/*[समय तय होना है]*/,venue:'बादली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
+    {icon:'assets/images/event-haldi.png',name:'हल्दी समारोह',date:'२९ नवंबर २०२६'/*[तारीख तय होनी है]*/,time:'दोपहर २:०० बजे'/*[समय तय होना है]*/,venue:'बदली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
+    {icon:'assets/images/event-mehndi.png',name:'मेहंदी समारोह',date:'३० नवंबर २०२६'/*[तारीख तय होनी है]*/,time:'दोपहर २:०० बजे'/*[समय तय होना है]*/,venue:'बदली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
+    {icon:'assets/images/event-sangeet.png',name:'संगीत संध्या',date:'१ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'रात ८:०० बजे'/*[समय तय होना है]*/,venue:'बदली, नागौर, राजस्थान'/*[स्थान तय होना है]*/},
+	{icon:'assets/images/event-baraat.png',name:'शुभ बारात प्रस्थान',date:'२ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'दोपहर २:०० बजे'/*[समय तय होना है]*/,venue: 'प्रस्थान: बदली, नागौर\nगंतव्य: चण्डावल, पाली'/*[स्थान तय होना है]*/},
     {icon:'assets/images/event-wedding.png',name:'शुभ विवाह',date:'२ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'[समय तय होना है]',venue:'चण्डावल, पाली, राजस्थान'/*[स्थान तय होना है]*/},
-    {icon:'assets/images/event-reception.png',name:'स्वागत समारोह',date:'३ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'रात ८:०० बजे'/*[समय तय होना है]*/,venue:'बादली, नागौर, राजस्थान'/*[स्थान तय होना है]*/}
+    {icon:'assets/images/event-reception.png',name:'स्वागत समारोह',date:'३ दिसंबर २०२६'/*[तारीख तय होनी है]*/,time:'रात ८:०० बजे'/*[समय तय होना है]*/,venue:'बदली, नागौर, राजस्थान'/*[स्थान तय होना है]*/}
   ],
   // Replace each empty src with the final photograph path when ready.
   // Keep the category value to retain the themed placeholder until then.
